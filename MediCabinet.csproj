@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CEA6BCC-9ADE-4AE8-952F-F0B4E57F30F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MediCabinet</RootNamespace>
+    <AssemblyName>MediCabinet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ConsultationController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\PrescriptionController.cs" />
+    <Compile Include="Controllers\RendezVousController.cs" />
+    <Compile Include="Controllers\UtilisateurController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ADO\ConsultationADO.cs" />
+    <Compile Include="Models\ADO\PatientADO.cs" />
+    <Compile Include="Models\ADO\PrescriptionADO.cs" />
+    <Compile Include="Models\ADO\RendezVousADO.cs" />
+    <Compile Include="Models\ADO\UtilisateurADO.cs" />
+    <Compile Include="Models\Consultation.cs" />
+    <Compile Include="Models\Database\DbConnexion.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\RendezVous.cs" />
+    <Compile Include="Models\Utilisateur.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Forms\frmConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmConsultation.Designer.cs">
+      <DependentUpon>frmConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmDetailPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmDetailPrescription.Designer.cs">
+      <DependentUpon>frmDetailPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmListePrescriptionsParConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmListePrescriptionsParConsultation.Designer.cs">
+      <DependentUpon>frmListePrescriptionsParConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmPatientProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmPatientProfil.Designer.cs">
+      <DependentUpon>frmPatientProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmPrescription.Designer.cs">
+      <DependentUpon>frmPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmSelectionPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmSelectionPatient.Designer.cs">
+      <DependentUpon>frmSelectionPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmSelectionRendezVous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmSelectionRendezVous.Designer.cs">
+      <DependentUpon>frmSelectionRendezVous.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Models\ADO\PatientADO.resx">
+      <DependentUpon>PatientADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Views\Forms\frmGestionUtilisateurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmGestionUtilisateurs.Designer.cs">
+      <DependentUpon>frmGestionUtilisateurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmNouvelUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmNouvelUtilisateur.Designer.cs">
+      <DependentUpon>frmNouvelUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmRendezVous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmRendezVous.Designer.cs">
+      <DependentUpon>frmRendezVous.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Forms\frmConsultation.resx">
+      <DependentUpon>frmConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmPatientProfil.resx">
+      <DependentUpon>frmPatientProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmGestionUtilisateurs.resx">
+      <DependentUpon>frmGestionUtilisateurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmNouvelUtilisateur.resx">
+      <DependentUpon>frmNouvelUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmRendezVous.resx">
+      <DependentUpon>frmRendezVous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmSelectionPatient.resx">
+      <DependentUpon>frmSelectionPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\frmSelectionRendezVous.resx">
+      <DependentUpon>frmSelectionRendezVous.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

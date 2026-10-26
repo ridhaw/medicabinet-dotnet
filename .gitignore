@@ -1,0 +1,14 @@
+﻿# Visual Studio
+.vs/
+
+# Build
+bin/
+obj/
+
+# Executables
+*.exe
+*.pdb
+
+# User-specific
+*.suo
+*.user
